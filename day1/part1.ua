@@ -1,3 +1,9 @@
-Trebuchet ← /+⊐∵(⋕⊂⊃⊢(⊢⇌)▽↧⊃(≥@0)≤@9.)
+File ← &i "../utils.ua" "File"
 
-Trebuchet ⊜□≠,@\n &fras "input1.txt"
+Solve ← /+⊐∵(⋕⊂⊃⊢(⊢⇌)▽↧⊃(≥@0)≤@9.)
+
+Solve File "inputs/input1.txt"
+
+---
+⍤.=142 Solve File "inputs/example1.txt"
+---

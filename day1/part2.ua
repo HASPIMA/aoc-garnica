@@ -1,7 +1,9 @@
+File ← &i "../utils.ua" "File"
+
 # keep first empty item for consistency with indexes
 N ← {"" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine"}
 
-Trebuchet ← (
+Solve ← (
   ∵(
     ≡⊂⇡⧻.N # setup data
     ≡(
@@ -22,4 +24,8 @@ Trebuchet ← (
   /+ # Add all line results
 )
 
-Trebuchet ⊜□≠,@\n &fras "input1.txt"
+Solve File "inputs/input1.txt"
+
+---
+⍤.=281 Solve File "inputs/example2.txt"
+---
