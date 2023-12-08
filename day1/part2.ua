@@ -11,15 +11,14 @@ Solve ← (
         ⌕∩°□⊢⇌ # find number using words
       )(
         ⊃(
-          ⌕$"_"∩°□⊢ # find number using digit
-        )⊢          # keep index
+          ⌕°⋕∩°□⊢ # find number using digit
+        )⊢        # keep index
       )
       ↥ # join same word and number in position
       × # use index number
     )
     ⊐▽>0./↥     # join all numbers and delete zeroes
-    ⊃(×10⊢)(⊢⇌) # get first and last digit
-    +           # add them
+    ⋕⊂∩°⋕⊃⊢(⊢⇌) # get first and last digit and parse them
   )
   /+ # Add all line results
 )
