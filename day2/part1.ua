@@ -1,20 +1,19 @@
 File ← &i "../utils.ua" "File"
 
-Solve ← /+/+∵(
+ParseReg ← /↥∵(⋕▽↧⊃(≥@0)(≤@9).°□)regex$"\\d+_"
+
+Solve ← /+≡(
   ⊃⊃⊃(
-    /↥∵(⋕⊢⊜□≠,@ °□)regex"\\d+ red"
+    ParseReg" red"
   )(
-    /↥∵(⋕⊢⊜□≠,@ °□)regex"\\d+ green"
+    ParseReg" green"
   )(
-    /↥∵(⋕⊢⊜□≠,@ °□)regex"\\d+ blue"
+    ParseReg" blue"
   )(
-    /↥∵(⋕⊢⇌⊜□≠,@ °□)regex"Game \\d+"
+    ParseReg":"
   )
-  ⊂⊂
-  12_13_14
-  ≤
-  /↧
-  ×
+  /↧≤12_13_14⊂⊂
+  ⊢×
 )
 
 Solve File "inputs/input1.txt"
