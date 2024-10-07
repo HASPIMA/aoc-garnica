@@ -1,4 +1,4 @@
-File ← &i "../utils.ua" "File"
+~ "../utils.ua" ~ File
 
 ParseReg ← /↥∵(⋕▽↧⊃(≥@0)(≤@9).°□)regex$"\\d+_"
 
@@ -16,6 +16,6 @@ Solve ← /+≡(
 
 Solve File "inputs/input1.txt"
 
----
+---test
 ⍤.=2286 Solve File "inputs/example1.txt"
 ---
