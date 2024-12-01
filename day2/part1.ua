@@ -3,14 +3,10 @@
 ParseReg ← /↥∵(⋕▽↧⊃(≥@0)(≤@9).°□)regex$"\\d+_"
 
 Solve ← /+≡(
-  ⊃⊃⊃(
-    ParseReg" red"
-  )(
-    ParseReg" green"
-  )(
-    ParseReg" blue"
-  )(
-    ParseReg":"
+  ⊃(ParseReg" red"
+  | ParseReg" green"
+  | ParseReg" blue"
+  | ParseReg":"
   )
   /↧≤12_13_14⊂⊂
   ⊢×
@@ -18,6 +14,6 @@ Solve ← /+≡(
 
 Solve File "inputs/input1.txt"
 
----test
-⍤.=8 Solve File "inputs/example1.txt"
----
+┌─╴test
+  ⍤.=8 Solve File "inputs/example1.txt"
+└─╴

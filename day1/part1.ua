@@ -4,6 +4,6 @@ Solve ← /+≡◇(⋕⊂⊃⊢(⊢⇌)▽↧⊃(≥@0)≤@9.)
 
 Solve File "inputs/input1.txt"
 
----test
-⍤.=142 Solve File "inputs/example1.txt"
----
+┌─╴test
+  ⍤.=142 Solve File "inputs/example1.txt"
+└─╴

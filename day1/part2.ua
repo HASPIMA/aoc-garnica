@@ -4,15 +4,11 @@
 N ← {"" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine"}
 
 Solve ← (
-  ∵(
-    ≡⊂⇡⧻.N # setup data
+  ∵(≡⊂⇡⧻.N # setup data
     ≡◇(
-      ⊃⊃(
-        ◇⌕⊢⇌ # find number using words
-      )(
-        ⌕°⋕⊢ # find number using digit
-      )(
-        °□⊢ # keep index
+      ⊃(◇⌕⊢⇌ # find number using words
+      | ⌕°⋕⊢ # find number using digit
+      | °□⊢  # keep index
       )
       ↥ # join same word and number in position
       × # use index number
@@ -25,15 +21,12 @@ Solve ← (
 
 # Compacted version
 Solve ← /+(
-  ∵(
-    ⋕⊂∩°⋕⊃⊢(⊢⇌)▽>0./↥≡◇(
-      ×↥⊃⊃(◇⌕⊢⇌)(⌕°⋕⊢)(°□⊢)
-    )≡⊂⇡⧻.N
-  )
-)
+  ∵(⋕⊂∩°⋕⊃⊢(⊢⇌)▽>0./↥≡◇(
+      ×↥⊃(◇⌕⊢⇌|⌕°⋕⊢|°□⊢)
+    )≡⊂⇡⧻.N))
 
 Solve File "inputs/input1.txt"
 
----test
-⍤.=281 Solve File "inputs/example2.txt"
----
+┌─╴test
+  ⍤.=281 Solve File "inputs/example2.txt"
+└─╴
