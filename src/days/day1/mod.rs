@@ -41,21 +41,29 @@ pub fn part2(input: &str) -> Result<i32, &'static str> {
 
 #[cfg(test)]
 mod tests {
-    use std::fs::read_to_string;
-
     use super::*;
 
     #[test]
     fn test_part1() {
-        let input = read_to_string("data/days/day1/example1.txt").unwrap();
-        let result = part1(&input).unwrap();
+        let input = r#"3   4
+                       4   3
+                       2   5
+                       1   3
+                       3   9
+                       3   3"#;
+        let result = part1(input).unwrap();
         assert_eq!(result, 11);
     }
 
     #[test]
     fn test_part2() {
-        let input = read_to_string("data/days/day1/example1.txt").unwrap();
-        let result = part2(&input).unwrap();
+        let input = r#"3   4
+                       4   3
+                       2   5
+                       1   3
+                       3   9
+                       3   3"#;
+        let result = part2(input).unwrap();
         assert_eq!(result, 31);
     }
 }
