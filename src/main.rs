@@ -23,6 +23,8 @@ fn main() {
     let res = match (day.as_str(), part.as_str()) {
         ("1", "1") => days::day1::part1(&input),
         ("1", "2") => days::day1::part2(&input),
+        ("2", "1") => days::day2::part1(&input),
+        ("2", "2") => days::day2::part2(&input),
         _ => unimplemented!(),
     };
 
