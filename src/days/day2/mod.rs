@@ -1,12 +1,19 @@
+#[derive(Debug)]
+enum Direction {
+    None,
+    Asc,
+    Desc,
+}
+
 pub fn check_safe(levels: Vec<i32>) -> Result<(), ()> {
     levels
         .windows(2)
         .map(|w| w[0] - w[1])
-        .try_fold("-", |acc, x| match (acc, x) {
-            ("-", 1..=3) => Ok("asc"),
-            ("-", -3..=-1) => Ok("desc"),
-            ("asc", 1..=3) => Ok("asc"),
-            ("desc", -3..=-1) => Ok("desc"),
+        .try_fold(Direction::None, |acc, x| match (acc, x) {
+            (Direction::None, 1..=3) => Ok(Direction::Asc),
+            (Direction::None, -3..=-1) => Ok(Direction::Desc),
+            (Direction::Asc, 1..=3) => Ok(Direction::Asc),
+            (Direction::Desc, -3..=-1) => Ok(Direction::Desc),
             _ => Err(()),
         })
         .map(|_| ())
